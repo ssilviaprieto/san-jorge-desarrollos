@@ -46,7 +46,7 @@ export default async function UrbanizationDetailPage({
   }
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
       <Reveal className="overflow-hidden rounded-[2.6rem] border border-white/70 bg-white/88 shadow-[0_24px_78px_-52px_rgba(15,23,42,0.5)] backdrop-blur-sm">
         <div className="grid gap-0 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="relative min-h-[24rem]">
@@ -131,7 +131,7 @@ export default async function UrbanizationDetailPage({
         </div>
       </Reveal>
 
-      <section className="mt-12 grid gap-6 lg:grid-cols-3">
+      <section className="mt-9 grid gap-4 lg:grid-cols-3">
         <Reveal className="rounded-[1.9rem] border border-white/70 bg-white/90 p-6 shadow-[0_18px_60px_-46px_rgba(15,23,42,0.45)]">
           <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
             <SiteIcon name="home" />
@@ -187,7 +187,7 @@ export default async function UrbanizationDetailPage({
         </Reveal>
       </section>
 
-      <section className="mt-14 grid gap-10 lg:grid-cols-[1fr_0.36fr]">
+      <section className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.34fr]">
         <Reveal>
           <div className="space-y-6">
             <div className="space-y-3">

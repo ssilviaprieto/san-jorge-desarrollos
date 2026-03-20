@@ -8,22 +8,28 @@ export const company = {
     "Desarrollamos urbanizaciones con identidad propia, criterios urbanos consistentes y una comercialización cercana para acompañar decisiones de inversión y nuevos proyectos de vida.",
   values: [
     {
-      title: "Planificación consistente",
+      title: "Planificación clara",
       description:
-        "Cada desarrollo parte de una lectura clara del suelo, la implantación y el potencial comercial de su entorno.",
+        "Cada proyecto parte de una lectura precisa del suelo, su implantación y el potencial del entorno.",
       icon: "blueprint",
     },
     {
-      title: "Atención personalizada",
+      title: "Atención directa",
       description:
-        "Acompañamos cada consulta con información concreta, tiempos claros y seguimiento comercial directo.",
+        "Acompañamos cada consulta con información concreta, tiempos claros y seguimiento comercial cercano.",
       icon: "handshake",
     },
     {
-      title: "Entornos para proyectarse",
+      title: "Entornos equilibrados",
       description:
-        "Priorizamos propuestas residenciales con escala equilibrada, imagen cuidada y vínculo real con la naturaleza.",
+        "Priorizamos propuestas residenciales con escala cuidada, imagen sólida y vínculo con la naturaleza.",
       icon: "home",
+    },
+    {
+      title: "Visión sustentable",
+      description:
+        "Incorporamos criterios ambientales que mejoran la relación entre urbanización, paisaje y calidad de vida.",
+      icon: "leaf",
     },
   ],
   sustainability: {

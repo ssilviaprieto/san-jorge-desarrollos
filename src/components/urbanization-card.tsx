@@ -18,50 +18,50 @@ export function UrbanizationCard({
       href={`/urbanizaciones/${urbanization.slug}`}
       target="_blank"
       rel="noreferrer"
-      className="group overflow-hidden rounded-[2rem] border border-white/60 bg-white/88 shadow-[0_20px_70px_-45px_rgba(15,23,42,0.55)] backdrop-blur-sm transition duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_85px_-40px_rgba(13,148,136,0.45)]"
+      className="group overflow-hidden rounded-2xl border border-white/70 bg-white/90 shadow-[0_18px_54px_-40px_rgba(15,23,42,0.45)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_22px_60px_-36px_rgba(13,148,136,0.35)]"
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
-        {urbanization.previewImage && (
-          <Image
-            src={urbanization.previewImage}
-            alt={urbanization.name}
-            fill
-            priority={priority}
-            sizes="(min-width: 1280px) 24vw, (min-width: 768px) 45vw, 100vw"
-            className="object-cover transition duration-700 group-hover:scale-105"
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/5 to-transparent" />
-        <div className="absolute left-5 top-5 flex flex-wrap gap-2">
-          {urbanization.plans.length > 0 && (
-            <span className="rounded-full border border-white/25 bg-white/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-md">
-              Planos
-            </span>
+      <div className="grid gap-0 md:grid-cols-[0.94fr_1.06fr]">
+        <div className="relative aspect-[16/10] overflow-hidden md:aspect-auto md:min-h-[11rem]">
+          {urbanization.previewImage && (
+            <Image
+              src={urbanization.previewImage}
+              alt={urbanization.name}
+              fill
+              priority={priority}
+              sizes="(min-width: 768px) 24vw, 100vw"
+              className="object-cover transition duration-500 group-hover:scale-[1.03]"
+            />
           )}
-          {urbanization.reglamento && (
-            <span className="rounded-full border border-white/25 bg-white/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-md">
-              Reglamento
-            </span>
-          )}
-        </div>
-      </div>
-
-      <div className="space-y-5 p-6 md:p-7">
-        <div className="space-y-2.5">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
-            {urbanization.location}
-          </p>
-          <h3 className="font-[var(--font-display)] text-2xl text-slate-950">
-            {urbanization.name}
-          </h3>
-          <p className="text-sm leading-6 text-slate-600">
-            {urbanization.summary}
-          </p>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent md:bg-gradient-to-r md:from-transparent md:to-slate-950/10" />
         </div>
 
-        <div className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
-          Ver desarrollo
-          <SiteIcon name="arrow" className="h-4 w-4" />
+        <div className="flex flex-col justify-between gap-4 p-4 md:p-5">
+          <div className="space-y-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal-700">
+              {urbanization.location}
+            </p>
+            <h3 className="font-[var(--font-display)] text-[1.45rem] leading-tight text-slate-950">
+              {urbanization.name}
+            </h3>
+            <p className="text-sm leading-6 text-slate-600">
+              {urbanization.summary}
+            </p>
+          </div>
+
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex flex-wrap gap-2">
+              {urbanization.plans.length > 0 && (
+                <span className="rounded-full bg-teal-50 px-2.5 py-1 text-[11px] font-semibold text-teal-700">
+                  Planos
+                </span>
+              )}
+            </div>
+
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1.5 text-sm font-semibold text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+              Ver desarrollo
+              <SiteIcon name="arrow" className="h-3.5 w-3.5" />
+            </span>
+          </div>
         </div>
       </div>
     </Link>

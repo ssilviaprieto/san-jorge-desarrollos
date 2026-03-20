@@ -9,12 +9,12 @@ type FooterProps = {
 export function Footer({ urbanizations, email, whatsappUrl }: FooterProps) {
   return (
     <footer className="mt-24 border-t border-white/60 bg-slate-950 text-slate-200">
-      <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_0.9fr_0.9fr] lg:px-8">
-        <div className="space-y-4">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.3fr_0.9fr_0.9fr] lg:px-8">
+        <div className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.26em] text-teal-300">
             San Jorge Desarrollos
           </p>
-          <h2 className="font-[var(--font-display)] text-3xl text-white">
+          <h2 className="font-[var(--font-display)] text-[1.9rem] text-white">
             Desarrollos con escala humana y mirada a largo plazo.
           </h2>
           <p className="max-w-xl text-sm leading-7 text-slate-400">
@@ -23,7 +23,7 @@ export function Footer({ urbanizations, email, whatsappUrl }: FooterProps) {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">
             Urbanizaciones
           </h3>
@@ -42,7 +42,7 @@ export function Footer({ urbanizations, email, whatsappUrl }: FooterProps) {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">
             Contacto
           </h3>
