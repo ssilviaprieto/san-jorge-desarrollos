@@ -8,16 +8,11 @@ import { siteAssets, urbanizations } from "@/data/generated-urbanizations";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: {
-    default: "San Jorge Desarrollos",
-    template: "%s | San Jorge Desarrollos",
-  },
+  title: "San Jorge Desarrollos",
   description:
     "Urbanizaciones y desarrollos inmobiliarios en San Vicente con una presentación clara, profesional y lista para inversión.",
   icons: {
-    icon: siteAssets.favicon,
-    shortcut: siteAssets.favicon,
-    apple: siteAssets.favicon,
+    icon: "/favicon.png",
   },
 };
 
