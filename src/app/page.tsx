@@ -1,65 +1,287 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { ContactForm } from "@/components/contact-form";
+import { Reveal } from "@/components/reveal";
+import { SiteIcon } from "@/components/site-icon";
+import { UrbanizationCard } from "@/components/urbanization-card";
+import { company } from "@/data/company";
+import { urbanizations } from "@/data/generated-urbanizations";
+
+const featuredUrbanizations = urbanizations.slice(0, 4);
+const heroImage = urbanizations[0]?.heroImage;
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="pb-10">
+      <section className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-center lg:px-8 lg:py-16">
+        <Reveal className="relative flex flex-col justify-center">
+          <div className="max-w-2xl space-y-8">
+            <div className="inline-flex rounded-full border border-teal-500/20 bg-teal-500/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-800">
+              Desarrollos inmobiliarios en San Vicente
+            </div>
+
+            <div className="space-y-5">
+              <h1 className="max-w-xl font-[var(--font-display)] text-5xl leading-[0.95] text-slate-950 sm:text-6xl lg:text-[4.5rem]">
+                {company.name}
+              </h1>
+              <p className="max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
+                {company.slogan}
+              </p>
+              <p className="max-w-2xl text-base leading-8 text-slate-600">
+                Presentamos urbanizaciones con identidad, material visual ordenado
+                y una lectura comercial clara para acompañar decisiones de
+                inversión y nuevos proyectos de vida.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/urbanizaciones"
+                className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-teal-600"
+              >
+                Ver urbanizaciones
+              </Link>
+              <a
+                href={company.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/85 px-6 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-teal-500 hover:text-teal-700"
+              >
+                Consultar por WhatsApp
+              </a>
+            </div>
+
+            <div className="grid gap-4 border-t border-slate-200 pt-8 sm:grid-cols-3">
+              {company.metrics.map((metric) => (
+                <div key={metric.label} className="space-y-2">
+                  <p className="font-[var(--font-display)] text-3xl text-slate-950">
+                    {metric.value}
+                  </p>
+                  <p className="max-w-[12rem] text-sm leading-6 text-slate-600">
+                    {metric.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={150} className="relative flex items-center">
+          <div className="relative isolate w-full overflow-hidden rounded-[2.6rem] border border-white/70 bg-slate-950 shadow-[0_30px_95px_-48px_rgba(15,23,42,0.8)]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(20,184,166,0.42),_transparent_36%)]" />
+            <div className="relative aspect-[4/4.8] w-full">
+              {heroImage && (
+                <Image
+                  src={heroImage}
+                  alt="San Jorge Desarrollos"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 42vw, 100vw"
+                  className="object-cover opacity-92"
+                />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/28 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 space-y-4 p-7 text-white sm:p-8">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-teal-200">
+                  Portfolio de urbanizaciones
+                </p>
+                <h2 className="max-w-md font-[var(--font-display)] text-3xl leading-tight sm:text-[2rem]">
+                  Proyectos con imagen sólida, planos y documentación integrada.
+                </h2>
+                <p className="max-w-md text-sm leading-7 text-slate-200/90">
+                  Un sitio pensado para recorrer cada desarrollo con mejor
+                  contexto visual, comercial y documental.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <Reveal className="rounded-[2.3rem] border border-white/70 bg-white/88 p-8 shadow-[0_18px_70px_-52px_rgba(15,23,42,0.5)] backdrop-blur-sm md:p-10 lg:p-12">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="space-y-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-700">
+                Valores
+              </p>
+              <h2 className="max-w-md font-[var(--font-display)] text-4xl leading-tight text-slate-950">
+                Una propuesta sobria, ordenada y bien presentada.
+              </h2>
+              <p className="max-w-lg text-base leading-8 text-slate-600">
+                {company.intro}
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {company.values.map((value, index) => (
+                <Reveal
+                  key={value.title}
+                  delay={index * 90}
+                  className="flex h-full flex-col rounded-[1.8rem] border border-slate-200/80 bg-slate-50/80 p-6"
+                >
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+                    <SiteIcon name={value.icon} />
+                  </div>
+                  <h3 className="font-[var(--font-display)] text-[1.65rem] leading-tight text-slate-950">
+                    {value.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    {value.description}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <Reveal className="overflow-hidden rounded-[2.3rem] border border-teal-200/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(236,254,255,0.88))] p-8 shadow-[0_20px_70px_-56px_rgba(15,23,42,0.45)] md:p-10 lg:p-12">
+          <div className="grid gap-8 lg:grid-cols-[0.84fr_1.16fr]">
+            <div className="space-y-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-700">
+                Sustentabilidad
+              </p>
+              <h2 className="max-w-md font-[var(--font-display)] text-4xl leading-tight text-slate-950">
+                Barrios ecológicamente sustentables.
+              </h2>
+              <p className="max-w-lg text-base leading-8 text-slate-600">
+                {company.sustainability.intro}
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {company.sustainability.points.map((point, index) => (
+                <Reveal
+                  key={point.title}
+                  delay={index * 80}
+                  className="rounded-[1.7rem] border border-white/70 bg-white/90 p-5"
+                >
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+                    <SiteIcon name={point.icon} />
+                  </div>
+                  <h3 className="text-base font-semibold text-slate-950">
+                    {point.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-slate-600">
+                    {point.description}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <Reveal className="space-y-8">
+          <div className="max-w-3xl space-y-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-700">
+              Decálogo
+            </p>
+            <h2 className="font-[var(--font-display)] text-4xl leading-tight text-slate-950">
+              Criterios de convivencia para una urbanización cuidada.
+            </h2>
+            <p className="text-base leading-8 text-slate-600">
+              Tomamos el contenido base del decálogo institucional y lo
+              convertimos en pautas simples, consistentes y fáciles de entender
+              para preservar el orden, la convivencia y el buen vivir.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {company.decalog.map((item, index) => (
+              <Reveal
+                key={item.title}
+                delay={index * 70}
+                className="rounded-[1.7rem] border border-white/70 bg-white/90 p-5 shadow-[0_16px_48px_-42px_rgba(15,23,42,0.45)]"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 text-teal-200">
+                  <SiteIcon name={item.icon} />
+                </div>
+                <h3 className="text-base font-semibold text-slate-950">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-slate-600">
+                  {item.description}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <Reveal className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="space-y-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-700">
+              Urbanizaciones destacadas
+            </p>
+            <h2 className="font-[var(--font-display)] text-4xl text-slate-950">
+              Una selección actual del portfolio.
+            </h2>
+            <p className="max-w-2xl text-base leading-8 text-slate-600">
+              Accedé a cada desarrollo con imágenes seleccionadas, planos y una
+              ficha más clara para comparar alternativas.
+            </p>
+          </div>
+          <Link
+            href="/urbanizaciones"
+            className="inline-flex w-fit rounded-full border border-slate-300 bg-white/80 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-teal-500 hover:text-teal-700"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Ver todas
+          </Link>
+        </Reveal>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {featuredUrbanizations.map((urbanization, index) => (
+            <Reveal key={urbanization.slug} delay={index * 90}>
+              <UrbanizationCard urbanization={urbanization} priority={index < 2} />
+            </Reveal>
+          ))}
         </div>
-      </main>
+      </section>
+
+      <section id="contacto" className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <Reveal className="overflow-hidden rounded-[2.5rem] border border-white/70 bg-slate-950 text-white shadow-[0_30px_90px_-45px_rgba(15,23,42,0.85)]">
+          <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="space-y-6 bg-[linear-gradient(160deg,rgba(15,23,42,0.98),rgba(13,148,136,0.9))] p-8 md:p-10 lg:p-12">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-200">
+                Contacto
+              </p>
+              <h2 className="max-w-md font-[var(--font-display)] text-4xl leading-tight">
+                Recibí asesoramiento para elegir tu próxima inversión.
+              </h2>
+              <p className="max-w-xl text-base leading-8 text-slate-200">
+                Compartinos tu consulta y te responderemos con información
+                comercial, documentación disponible y orientación según el
+                desarrollo que mejor se adapte a lo que buscás.
+              </p>
+
+              <div className="space-y-4 rounded-[1.9rem] border border-white/12 bg-white/8 p-6 backdrop-blur-sm">
+                <p className="text-sm leading-7 text-slate-200">
+                  Si preferís una respuesta más inmediata, también podés escribir
+                  directamente por WhatsApp.
+                </p>
+                <a
+                  href={company.whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-100"
+                >
+                  Ir a WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 text-slate-950 md:p-10 lg:p-12">
+              <ContactForm />
+            </div>
+          </div>
+        </Reveal>
+      </section>
     </div>
   );
 }
