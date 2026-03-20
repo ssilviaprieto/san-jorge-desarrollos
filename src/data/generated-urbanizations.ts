@@ -15,6 +15,7 @@ export type Urbanization = {
   summary: string;
   location: string;
   logo?: string;
+  previewImage: string | null;
   coverImage: string | null;
   heroImage: string | null;
   images: string[];
@@ -47,6 +48,7 @@ export const urbanizations: Urbanization[] = [
     "summary": "Arroyos de San Vicente integra el portfolio de San Jorge Desarrollos con una propuesta pensada para combinar inversión, entorno y una implantación residencial equilibrada.",
     "location": "San Vicente, Buenos Aires",
     "logo": "/assets/logos/arroyos-de-san-vicente-logo.png",
+    "previewImage": "/assets/urbanizaciones/arroyos-de-san-vicente/1-636x360.jpg",
     "coverImage": "/assets/urbanizaciones/arroyos-de-san-vicente/arroyosback.jpg",
     "heroImage": "/assets/urbanizaciones/arroyos-de-san-vicente/arroyosback.jpg",
     "images": [
@@ -138,6 +140,7 @@ export const urbanizations: Urbanization[] = [
     "summary": "Las Perdices integra el portfolio de San Jorge Desarrollos con una propuesta pensada para combinar inversión, entorno y una implantación residencial equilibrada.",
     "location": "San Vicente, Buenos Aires",
     "logo": "/assets/logos/las-perdices-logo.png",
+    "previewImage": "/assets/urbanizaciones/las-perdices/fotos-png-01.png",
     "coverImage": "/assets/urbanizaciones/las-perdices/whatsapp-image-2022-10-18-at-09-52-41.jpeg",
     "heroImage": "/assets/urbanizaciones/las-perdices/whatsapp-image-2022-10-18-at-09-52-41.jpeg",
     "images": [
@@ -215,6 +218,7 @@ export const urbanizations: Urbanization[] = [
     "summary": "Oasis integra el portfolio de San Jorge Desarrollos con una propuesta pensada para combinar inversión, entorno y una implantación residencial equilibrada.",
     "location": "San Vicente, Buenos Aires",
     "logo": "/assets/logos/oasis-logo.png",
+    "previewImage": "/assets/urbanizaciones/oasis/piletab-1.png",
     "coverImage": "/assets/urbanizaciones/oasis/oasis.jpg",
     "heroImage": "/assets/urbanizaciones/oasis/oasis.jpg",
     "images": [
@@ -301,6 +305,7 @@ export const urbanizations: Urbanization[] = [
     "summary": "El Viejo Ombú es un desarrollo en San Vicente pensado para quienes buscan contacto con la naturaleza, escala residencial y un proyecto con identidad propia.",
     "location": "San Vicente, Buenos Aires",
     "logo": "/assets/logos/el-viejo-ombu-logo.png",
+    "previewImage": "/assets/urbanizaciones/el-viejo-ombu/pileta-2-840x631.jpg",
     "coverImage": "/assets/urbanizaciones/el-viejo-ombu/pileta-1-840x631.jpg",
     "heroImage": "/assets/urbanizaciones/el-viejo-ombu/pileta-1-840x631.jpg",
     "images": [

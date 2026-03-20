@@ -259,7 +259,7 @@ export default async function UrbanizationDetailPage({
                     href={documentPath}
                     target="_blank"
                     rel="noreferrer"
-                    className="block rounded-2xl border border-slate-200 px-4 py-3 text-sm text-slate-700 transition hover:border-teal-500 hover:bg-teal-50"
+                    className="block rounded-2xl bg-slate-50 px-4 py-3 text-sm text-slate-700 transition hover:bg-teal-50 hover:text-slate-950"
                   >
                     Documento {index + 1}
                   </a>

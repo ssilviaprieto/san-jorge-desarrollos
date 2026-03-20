@@ -16,12 +16,14 @@ export function UrbanizationCard({
   return (
     <Link
       href={`/urbanizaciones/${urbanization.slug}`}
+      target="_blank"
+      rel="noreferrer"
       className="group overflow-hidden rounded-[2rem] border border-white/60 bg-white/88 shadow-[0_20px_70px_-45px_rgba(15,23,42,0.55)] backdrop-blur-sm transition duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_85px_-40px_rgba(13,148,136,0.45)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
-        {urbanization.coverImage && (
+        {urbanization.previewImage && (
           <Image
-            src={urbanization.coverImage}
+            src={urbanization.previewImage}
             alt={urbanization.name}
             fill
             priority={priority}

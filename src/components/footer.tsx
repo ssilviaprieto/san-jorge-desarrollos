@@ -32,6 +32,8 @@ export function Footer({ urbanizations, email, whatsappUrl }: FooterProps) {
               <Link
                 key={urbanization.slug}
                 href={`/urbanizaciones/${urbanization.slug}`}
+                target="_blank"
+                rel="noreferrer"
                 className="block text-sm text-slate-300 transition hover:text-white"
               >
                 {urbanization.name}

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/reveal";
 import { SiteIcon } from "@/components/site-icon";
 import { UrbanizationCard } from "@/components/urbanization-card";
@@ -100,9 +99,9 @@ export default function Home() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <Reveal className="rounded-[2.3rem] border border-white/70 bg-white/88 p-8 shadow-[0_18px_70px_-52px_rgba(15,23,42,0.5)] backdrop-blur-sm md:p-10 lg:p-12">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="space-y-4">
+        <Reveal className="rounded-[2.2rem] border border-white/70 bg-white/88 p-8 shadow-[0_18px_70px_-52px_rgba(15,23,42,0.5)] backdrop-blur-sm md:p-10 lg:p-11">
+          <div className="space-y-8">
+            <div className="max-w-3xl space-y-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-700">
                 Valores
               </p>
@@ -114,20 +113,20 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {company.values.map((value, index) => (
                 <Reveal
                   key={value.title}
                   delay={index * 90}
-                  className="flex h-full flex-col rounded-[1.8rem] border border-slate-200/80 bg-slate-50/80 p-6"
+                  className="flex h-full min-h-0 flex-col rounded-[1.6rem] border border-slate-200/80 bg-slate-50/80 p-5"
                 >
-                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
                     <SiteIcon name={value.icon} />
                   </div>
-                  <h3 className="font-[var(--font-display)] text-[1.65rem] leading-tight text-slate-950">
+                  <h3 className="font-[var(--font-display)] text-[1.5rem] leading-tight text-slate-950">
                     {value.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                  <p className="mt-2.5 text-sm leading-6.5 text-slate-600">
                     {value.description}
                   </p>
                 </Reveal>
@@ -137,9 +136,9 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <Reveal className="overflow-hidden rounded-[2.3rem] border border-teal-200/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(236,254,255,0.88))] p-8 shadow-[0_20px_70px_-56px_rgba(15,23,42,0.45)] md:p-10 lg:p-12">
-          <div className="grid gap-8 lg:grid-cols-[0.84fr_1.16fr]">
+      <section className="mx-auto w-full max-w-7xl px-4 py-9 sm:px-6 lg:px-8">
+        <Reveal className="overflow-hidden rounded-[2.2rem] border border-teal-200/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(236,254,255,0.88))] p-7 shadow-[0_20px_70px_-56px_rgba(15,23,42,0.45)] md:p-9 lg:p-10">
+          <div className="grid gap-7 lg:grid-cols-[0.84fr_1.16fr]">
             <div className="space-y-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-700">
                 Sustentabilidad
@@ -152,20 +151,20 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-3.5 sm:grid-cols-2">
               {company.sustainability.points.map((point, index) => (
                 <Reveal
                   key={point.title}
                   delay={index * 80}
-                  className="rounded-[1.7rem] border border-white/70 bg-white/90 p-5"
+                  className="rounded-[1.55rem] border border-white/70 bg-white/90 p-4.5"
                 >
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+                  <div className="mb-3.5 flex h-9 w-9 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
                     <SiteIcon name={point.icon} />
                   </div>
                   <h3 className="text-base font-semibold text-slate-950">
                     {point.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-600">
+                  <p className="mt-2 text-sm leading-6.5 text-slate-600">
                     {point.description}
                   </p>
                 </Reveal>
@@ -175,8 +174,8 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <Reveal className="space-y-8">
+      <section className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <Reveal className="space-y-6">
           <div className="max-w-3xl space-y-4">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-700">
               Decálogo
@@ -191,20 +190,20 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-3.5 md:grid-cols-2 xl:grid-cols-4">
             {company.decalog.map((item, index) => (
               <Reveal
                 key={item.title}
                 delay={index * 70}
-                className="rounded-[1.7rem] border border-white/70 bg-white/90 p-5 shadow-[0_16px_48px_-42px_rgba(15,23,42,0.45)]"
+                className="rounded-[1.55rem] border border-white/70 bg-white/90 p-4.5 shadow-[0_16px_48px_-42px_rgba(15,23,42,0.45)]"
               >
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 text-teal-200">
+                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-2xl bg-slate-950 text-teal-200">
                   <SiteIcon name={item.icon} />
                 </div>
-                <h3 className="text-base font-semibold text-slate-950">
+                <h3 className="text-[15px] font-semibold text-slate-950">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-7 text-slate-600">
+                <p className="mt-1.5 text-[13px] leading-6 text-slate-600">
                   {item.description}
                 </p>
               </Reveal>
@@ -277,7 +276,46 @@ export default function Home() {
             </div>
 
             <div className="bg-white p-8 text-slate-950 md:p-10 lg:p-12">
-              <ContactForm />
+              <div className="flex h-full flex-col justify-center gap-5">
+                <a
+                  href={`mailto:${company.email}`}
+                  className="group flex items-center gap-4 rounded-[1.6rem] border border-slate-200 bg-slate-50/80 p-5 transition hover:border-teal-300 hover:bg-teal-50/70"
+                >
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+                    <SiteIcon name="mail" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
+                      Email
+                    </p>
+                    <p className="mt-1 text-sm font-medium text-slate-700 transition group-hover:text-slate-950">
+                      {company.email}
+                    </p>
+                  </div>
+                </a>
+
+                <a
+                  href={company.whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center justify-between gap-4 rounded-[1.6rem] bg-slate-950 p-5 text-white transition hover:bg-teal-600"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-teal-200">
+                      <SiteIcon name="message" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-200">
+                        WhatsApp
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-white">
+                        Escribir ahora
+                      </p>
+                    </div>
+                  </div>
+                  <SiteIcon name="arrow" className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </div>
         </Reveal>

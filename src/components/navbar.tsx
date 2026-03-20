@@ -75,6 +75,8 @@ export function Navbar({
                   <Link
                     key={urbanization.slug}
                     href={`/urbanizaciones/${urbanization.slug}`}
+                    target="_blank"
+                    rel="noreferrer"
                     className="block rounded-2xl px-4 py-3 text-sm text-slate-600 transition hover:bg-teal-50 hover:text-slate-950"
                   >
                     {urbanization.name}
@@ -163,6 +165,8 @@ export function Navbar({
                     <Link
                       key={urbanization.slug}
                       href={`/urbanizaciones/${urbanization.slug}`}
+                      target="_blank"
+                      rel="noreferrer"
                       onClick={() => setIsMenuOpen(false)}
                       className="block rounded-2xl px-3 py-2 text-sm text-slate-600 transition hover:bg-teal-50 hover:text-slate-950"
                     >

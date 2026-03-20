@@ -65,6 +65,8 @@ export function UrbanizationShowcaseCard({
           <div className="pt-2">
             <Link
               href={`/urbanizaciones/${urbanization.slug}`}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-500"
             >
               Ver desarrollo

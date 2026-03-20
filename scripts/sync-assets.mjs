@@ -409,6 +409,7 @@ function collectUrbanizationData(directoryPath) {
     summary,
     location: "San Vicente, Buenos Aires",
     logo,
+    previewImage: images[1] ?? images[0] ?? plans[0] ?? null,
     coverImage: images[0] ?? plans[0] ?? null,
     heroImage: images[0] ?? plans[0] ?? null,
     images,
@@ -450,6 +451,7 @@ export type Urbanization = {
   summary: string;
   location: string;
   logo?: string;
+  previewImage: string | null;
   coverImage: string | null;
   heroImage: string | null;
   images: string[];

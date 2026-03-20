@@ -12,7 +12,9 @@ type SiteIconName =
   | "shield"
   | "star"
   | "community"
-  | "arrow";
+  | "arrow"
+  | "mail"
+  | "message";
 
 type SiteIconProps = {
   name: SiteIconName;
@@ -129,6 +131,20 @@ export function SiteIcon({ name, className = "h-5 w-5" }: SiteIconProps) {
         <svg {...commonProps}>
           <path d="M5 12h14" />
           <path d="m13 6 6 6-6 6" />
+        </svg>
+      );
+    case "mail":
+      return (
+        <svg {...commonProps}>
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="m4 7 8 6 8-6" />
+        </svg>
+      );
+    case "message":
+      return (
+        <svg {...commonProps}>
+          <path d="M5 18.5V5.8A1.8 1.8 0 0 1 6.8 4h10.4A1.8 1.8 0 0 1 19 5.8v7.4A1.8 1.8 0 0 1 17.2 15H10l-5 3.5Z" />
+          <path d="M8 8h8M8 11h6" />
         </svg>
       );
     default:
