@@ -10,7 +10,7 @@ import {
   getUrbanizationBySlug,
   urbanizations,
 } from "@/data/generated-urbanizations";
-import { OFFICIAL_REGLAMENTO_PATH } from "@/data/reglamento";
+import { getUrbanizationReglamentoPath } from "@/data/reglamento";
 
 type UrbanizationPageProps = {
   params: Promise<{ slug: string }>;
@@ -237,7 +237,7 @@ export default async function UrbanizationDetailPage({
             </div>
 
             <a
-              href={OFFICIAL_REGLAMENTO_PATH}
+              href={getUrbanizationReglamentoPath(urbanization.slug)}
               target="_blank"
               rel="noreferrer"
               className="inline-flex w-full items-center justify-center rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-500"

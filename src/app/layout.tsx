@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     "Urbanizaciones y desarrollos inmobiliarios en San Vicente con una presentación clara, profesional y lista para inversión.",
   icons: {
     icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 

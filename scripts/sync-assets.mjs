@@ -19,7 +19,9 @@ const generatedDataPath = path.join(
   "generated-urbanizations.ts",
 );
 const officialReglamentoImportPath = "@/data/reglamento";
-const officialReglamentoToken = "__OFFICIAL_REGLAMENTO_PATH__";
+const generalReglamentoToken = "__GENERAL_REGLAMENTO_PATH__";
+const arroyosReglamentoToken = "__ARROYOS_REGLAMENTO_PATH__";
+const arroyosUrbanizationSlug = "arroyos-de-san-vicente";
 
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 const ignoredDirectories = new Set([
@@ -389,7 +391,10 @@ function collectUrbanizationData(directoryPath) {
     return getRelativePublicPath("assets", "docs", outputFileName);
   });
   const documents = copiedDocuments;
-  const reglamento = officialReglamentoToken;
+  const reglamento =
+    slug === arroyosUrbanizationSlug
+      ? arroyosReglamentoToken
+      : generalReglamentoToken;
 
   const ombuHtmlPath = path.join(directoryPath, "download.html");
   const ombuHtml = fs.existsSync(ombuHtmlPath)
@@ -433,12 +438,11 @@ function collectUrbanizationData(directoryPath) {
 }
 
 function writeGeneratedModule(urbanizations, siteAssets) {
-  const serializedUrbanizations = JSON.stringify(urbanizations, null, 2).replaceAll(
-    `"${officialReglamentoToken}"`,
-    "OFFICIAL_REGLAMENTO_PATH",
-  );
+  const serializedUrbanizations = JSON.stringify(urbanizations, null, 2)
+    .replaceAll(`"${generalReglamentoToken}"`, "GENERAL_REGLAMENTO_PATH")
+    .replaceAll(`"${arroyosReglamentoToken}"`, "ARROYOS_REGLAMENTO_PATH");
 
-  const moduleContents = `import { OFFICIAL_REGLAMENTO_PATH } from "${officialReglamentoImportPath}";
+  const moduleContents = `import { ARROYOS_REGLAMENTO_PATH, GENERAL_REGLAMENTO_PATH } from "${officialReglamentoImportPath}";
 
 export type GalleryItem = {
   src: string;

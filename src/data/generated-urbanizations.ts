@@ -1,4 +1,4 @@
-import { OFFICIAL_REGLAMENTO_PATH } from "@/data/reglamento";
+import { ARROYOS_REGLAMENTO_PATH, GENERAL_REGLAMENTO_PATH } from "@/data/reglamento";
 
 export type GalleryItem = {
   src: string;
@@ -129,7 +129,7 @@ export const urbanizations: Urbanization[] = [
       "Documentación disponible",
       "Acompañamiento comercial personalizado"
     ],
-    "reglamento": OFFICIAL_REGLAMENTO_PATH,
+    "reglamento": ARROYOS_REGLAMENTO_PATH,
     "documents": [
       "/assets/docs/arroyos-de-san-vicente-arma.pdf",
       "/assets/docs/arroyos-de-san-vicente-arr.pdf",
@@ -208,7 +208,7 @@ export const urbanizations: Urbanization[] = [
     "features": [
       "Acompañamiento comercial personalizado"
     ],
-    "reglamento": OFFICIAL_REGLAMENTO_PATH,
+    "reglamento": GENERAL_REGLAMENTO_PATH,
     "documents": []
   },
   {
@@ -296,7 +296,7 @@ export const urbanizations: Urbanization[] = [
       "Planos integrados",
       "Acompañamiento comercial personalizado"
     ],
-    "reglamento": OFFICIAL_REGLAMENTO_PATH,
+    "reglamento": GENERAL_REGLAMENTO_PATH,
     "documents": []
   },
   {
@@ -386,7 +386,7 @@ export const urbanizations: Urbanization[] = [
       "Documentación disponible",
       "Acompañamiento comercial personalizado"
     ],
-    "reglamento": OFFICIAL_REGLAMENTO_PATH,
+    "reglamento": GENERAL_REGLAMENTO_PATH,
     "documents": [
       "/assets/docs/el-viejo-ombu-master.pdf"
     ]

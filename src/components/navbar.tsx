@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { OFFICIAL_REGLAMENTO_PATH } from "@/data/reglamento";
+import { GENERAL_REGLAMENTO_PATH } from "@/data/reglamento";
 
 type NavbarProps = {
   urbanizations: Array<{ slug: string; name: string }>;
@@ -96,7 +96,7 @@ export function Navbar({
           </Link>
 
           <a
-            href={OFFICIAL_REGLAMENTO_PATH}
+            href={GENERAL_REGLAMENTO_PATH}
             target="_blank"
             rel="noreferrer"
             className="text-sm font-medium text-slate-600 transition hover:text-slate-950"
@@ -198,7 +198,7 @@ export function Navbar({
           </Link>
 
           <a
-            href={OFFICIAL_REGLAMENTO_PATH}
+            href={GENERAL_REGLAMENTO_PATH}
             target="_blank"
             rel="noreferrer"
             onClick={() => setIsMenuOpen(false)}
