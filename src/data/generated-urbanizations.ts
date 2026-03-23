@@ -1,3 +1,5 @@
+import { OFFICIAL_REGLAMENTO_PATH } from "@/data/reglamento";
+
 export type GalleryItem = {
   src: string;
   kind: "image" | "plan";
@@ -127,7 +129,7 @@ export const urbanizations: Urbanization[] = [
       "Documentación disponible",
       "Acompañamiento comercial personalizado"
     ],
-    "reglamento": "/assets/docs/arroyos-de-san-vicente-arma.pdf",
+    "reglamento": OFFICIAL_REGLAMENTO_PATH,
     "documents": [
       "/assets/docs/arroyos-de-san-vicente-arma.pdf",
       "/assets/docs/arroyos-de-san-vicente-arr.pdf",
@@ -188,7 +190,7 @@ export const urbanizations: Urbanization[] = [
     "description": [
       "Las Perdices integra el portfolio de San Jorge Desarrollos con una propuesta pensada para combinar inversión, entorno y una implantación residencial equilibrada.",
       "Su planteo urbano prioriza una lectura simple del conjunto, con escala residencial y una imagen cuidada.",
-      "Dispone de documentación complementaria para acompañar el proceso comercial con información accesible y ordenada.",
+      "La propuesta comercial se presenta con una comunicación directa, clara y orientada a compradores finales e inversores.",
       "Se inserta dentro del corredor de San Vicente, una zona de crecimiento sostenido y buena conexión con los principales accesos regionales."
     ],
     "descriptionSections": {
@@ -197,20 +199,17 @@ export const urbanizations: Urbanization[] = [
       ],
       "characteristics": [
         "Su planteo urbano prioriza una lectura simple del conjunto, con escala residencial y una imagen cuidada.",
-        "Dispone de documentación complementaria para acompañar el proceso comercial con información accesible y ordenada."
+        "La propuesta comercial se presenta con una comunicación directa, clara y orientada a compradores finales e inversores."
       ],
       "surroundings": [
         "Se inserta dentro del corredor de San Vicente, una zona de crecimiento sostenido y buena conexión con los principales accesos regionales."
       ]
     },
     "features": [
-      "Documentación disponible",
       "Acompañamiento comercial personalizado"
     ],
-    "reglamento": "/assets/docs/las-perdices-0.pdf",
-    "documents": [
-      "/assets/docs/las-perdices-0.pdf"
-    ]
+    "reglamento": OFFICIAL_REGLAMENTO_PATH,
+    "documents": []
   },
   {
     "name": "Oasis",
@@ -297,6 +296,7 @@ export const urbanizations: Urbanization[] = [
       "Planos integrados",
       "Acompañamiento comercial personalizado"
     ],
+    "reglamento": OFFICIAL_REGLAMENTO_PATH,
     "documents": []
   },
   {
@@ -386,9 +386,8 @@ export const urbanizations: Urbanization[] = [
       "Documentación disponible",
       "Acompañamiento comercial personalizado"
     ],
-    "reglamento": "/assets/docs/el-viejo-ombu-barrio-el-ombu-correccion.pdf",
+    "reglamento": OFFICIAL_REGLAMENTO_PATH,
     "documents": [
-      "/assets/docs/el-viejo-ombu-barrio-el-ombu-correccion.pdf",
       "/assets/docs/el-viejo-ombu-master.pdf"
     ]
   }

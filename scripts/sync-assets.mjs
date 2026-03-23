@@ -18,6 +18,8 @@ const generatedDataPath = path.join(
   "data",
   "generated-urbanizations.ts",
 );
+const officialReglamentoImportPath = "@/data/reglamento";
+const officialReglamentoToken = "__OFFICIAL_REGLAMENTO_PATH__";
 
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 const ignoredDirectories = new Set([
@@ -377,20 +379,17 @@ function collectUrbanizationData(directoryPath) {
     ...plans.slice(0, 2).map((imagePath) => ({ src: imagePath, kind: "plan" })),
   ];
 
-  const documents = pdfFiles.map((pdfPath) => {
+  const bestPdf = pickBestPdf(pdfFiles, slug);
+
+  const copiedDocuments = pdfFiles
+    .filter((pdfPath) => pdfPath !== bestPdf)
+    .map((pdfPath) => {
     const outputFileName = `${slug}-${sanitizeFileName(path.basename(pdfPath))}`;
     copyFileSafe(pdfPath, path.join(docsRoot, outputFileName));
     return getRelativePublicPath("assets", "docs", outputFileName);
   });
-
-  const bestPdf = pickBestPdf(pdfFiles, slug);
-  const reglamento = bestPdf
-    ? getRelativePublicPath(
-        "assets",
-        "docs",
-        `${slug}-${sanitizeFileName(path.basename(bestPdf))}`,
-      )
-    : undefined;
+  const documents = copiedDocuments;
+  const reglamento = officialReglamentoToken;
 
   const ombuHtmlPath = path.join(directoryPath, "download.html");
   const ombuHtml = fs.existsSync(ombuHtmlPath)
@@ -399,7 +398,7 @@ function collectUrbanizationData(directoryPath) {
   const descriptionSections =
     slug === "el-viejo-ombu"
       ? extractOmbuSections(directoryPath)
-      : createGenericSections(name, plans.length > 0, documents.length > 0);
+      : createGenericSections(name, plans.length > 0, copiedDocuments.length > 0);
 
   const summary = descriptionSections.general[0];
 
@@ -425,7 +424,7 @@ function collectUrbanizationData(directoryPath) {
     features: getUrbanizationFeatures(
       slug,
       plans.length > 0,
-      documents.length > 0,
+      copiedDocuments.length > 0,
       ombuHtml,
     ),
     reglamento,
@@ -434,7 +433,14 @@ function collectUrbanizationData(directoryPath) {
 }
 
 function writeGeneratedModule(urbanizations, siteAssets) {
-  const moduleContents = `export type GalleryItem = {
+  const serializedUrbanizations = JSON.stringify(urbanizations, null, 2).replaceAll(
+    `"${officialReglamentoToken}"`,
+    "OFFICIAL_REGLAMENTO_PATH",
+  );
+
+  const moduleContents = `import { OFFICIAL_REGLAMENTO_PATH } from "${officialReglamentoImportPath}";
+
+export type GalleryItem = {
   src: string;
   kind: "image" | "plan";
 };
@@ -473,7 +479,7 @@ export type SiteAssets = {
 
 export const siteAssets: SiteAssets = ${JSON.stringify(siteAssets, null, 2)};
 
-export const urbanizations: Urbanization[] = ${JSON.stringify(urbanizations, null, 2)};
+export const urbanizations: Urbanization[] = ${serializedUrbanizations};
 
 export function getUrbanizationBySlug(slug: string) {
   return urbanizations.find((urbanization) => urbanization.slug === slug);

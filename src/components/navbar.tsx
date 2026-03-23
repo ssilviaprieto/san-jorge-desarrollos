@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+import { OFFICIAL_REGLAMENTO_PATH } from "@/data/reglamento";
+
 type NavbarProps = {
   urbanizations: Array<{ slug: string; name: string }>;
   companyLogo?: string;
@@ -92,6 +94,15 @@ export function Navbar({
           >
             Contacto
           </Link>
+
+          <a
+            href={OFFICIAL_REGLAMENTO_PATH}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-medium text-slate-600 transition hover:text-slate-950"
+          >
+            Reglamento
+          </a>
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -185,6 +196,16 @@ export function Navbar({
           >
             Contacto
           </Link>
+
+          <a
+            href={OFFICIAL_REGLAMENTO_PATH}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+            className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
+          >
+            Reglamento
+          </a>
 
           <a
             href={whatsappUrl}

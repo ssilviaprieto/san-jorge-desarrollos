@@ -10,6 +10,7 @@ import {
   getUrbanizationBySlug,
   urbanizations,
 } from "@/data/generated-urbanizations";
+import { OFFICIAL_REGLAMENTO_PATH } from "@/data/reglamento";
 
 type UrbanizationPageProps = {
   params: Promise<{ slug: string }>;
@@ -235,21 +236,14 @@ export default async function UrbanizationDetailPage({
               </h2>
             </div>
 
-            {urbanization.reglamento ? (
-              <a
-                href={urbanization.reglamento}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex w-full items-center justify-center rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-500"
-              >
-                Ver reglamento
-              </a>
-            ) : (
-              <p className="text-sm leading-7 text-slate-600">
-                No se identificó un reglamento específico dentro de la
-                documentación disponible para este desarrollo.
-              </p>
-            )}
+            <a
+              href={OFFICIAL_REGLAMENTO_PATH}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-full items-center justify-center rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-500"
+            >
+              Ver reglamento
+            </a>
 
             {!!urbanization.documents.length && (
               <div className="space-y-2">
