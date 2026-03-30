@@ -22,6 +22,75 @@ const officialReglamentoImportPath = "@/data/reglamento";
 const generalReglamentoToken = "__GENERAL_REGLAMENTO_PATH__";
 const arroyosReglamentoToken = "__ARROYOS_REGLAMENTO_PATH__";
 const arroyosUrbanizationSlug = "arroyos-de-san-vicente";
+const generalReglamentoSourcePath = path.join(
+  sourceRoot,
+  "REGLAS DE URBA. PROTEGIDA- P1-P2-C-S-LT.pdf",
+);
+const arroyosReglamentoSourcePath = path.join(
+  sourceRoot,
+  "arroyos",
+  "reglas-arroyos.pdf",
+);
+const explicitDocumentSources = {
+  "arroyos-de-san-vicente": [
+    {
+      sourcePath: path.join(sourceRoot, "arroyos", "056 - GRAN ARROYOS - COLOR.pdf"),
+      outputFileName: "arroyos-gran-arroyos-color.pdf",
+    },
+  ],
+  "las-perdices": [
+    {
+      sourcePath: path.join(
+        sourceRoot,
+        "lasperdices",
+        "002 - ENMARCACIÓN CALLES - PERDICES II.pdf",
+      ),
+      outputFileName: "las-perdices-enmarcacion-calles-perdices-ii.pdf",
+    },
+    {
+      sourcePath: path.join(
+        sourceRoot,
+        "lasperdices",
+        "009 - IMPLANTACIÓN - QUINTAS DE LAS PERDICES - A4.pdf",
+      ),
+      outputFileName: "las-perdices-implantacion-quintas-de-las-perdices-a4.pdf",
+    },
+    {
+      sourcePath: path.join(
+        sourceRoot,
+        "lasperdices",
+        "013 - PARADA - SAS - INCORPORADO - PERDICES I.pdf",
+      ),
+      outputFileName: "las-perdices-parada-sas-incorporado-perdices-i.pdf",
+    },
+    {
+      sourcePath: path.join(
+        sourceRoot,
+        "lasperdices",
+        "018 - MASTER PERDICES I URBANIZACIÓN.pdf",
+      ),
+      outputFileName: "las-perdices-master-perdices-i-urbanizacion.pdf",
+    },
+  ],
+  "el-viejo-ombu": [
+    {
+      sourcePath: path.join(
+        sourceRoot,
+        "ombu",
+        "001 - 01 - IMPLANTACIÓN EL VIEJO OMBÚ - AMPLIACIÓN.pdf",
+      ),
+      outputFileName: "el-viejo-ombu-implantacion-ampliacion.pdf",
+    },
+    {
+      sourcePath: path.join(
+        sourceRoot,
+        "ombu",
+        "004 - IMPLANTACIÓN 9 MANZANAS - OMBÚ - SAN VICENTE.pdf",
+      ),
+      outputFileName: "el-viejo-ombu-implantacion-9-manzanas.pdf",
+    },
+  ],
+};
 
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 const ignoredDirectories = new Set([
@@ -88,6 +157,34 @@ function getRelativePublicPath(...segments) {
 function copyFileSafe(sourcePath, destinationPath) {
   ensureDirectory(path.dirname(destinationPath));
   fs.copyFileSync(sourcePath, destinationPath);
+}
+
+function copyExplicitDocuments(slug) {
+  const configuredDocuments = explicitDocumentSources[slug];
+
+  if (!configuredDocuments) return undefined;
+
+  return configuredDocuments.flatMap(({ sourcePath, outputFileName }) => {
+    if (!fs.existsSync(sourcePath)) return [];
+    copyFileSafe(sourcePath, path.join(docsRoot, outputFileName));
+    return [getRelativePublicPath("assets", "docs", outputFileName)];
+  });
+}
+
+function syncReglamentoAssets() {
+  if (fs.existsSync(generalReglamentoSourcePath)) {
+    copyFileSafe(
+      generalReglamentoSourcePath,
+      path.join(docsRoot, "reglamento-general.pdf"),
+    );
+  }
+
+  if (fs.existsSync(arroyosReglamentoSourcePath)) {
+    copyFileSafe(
+      arroyosReglamentoSourcePath,
+      path.join(docsRoot, "reglamento-arroyos.pdf"),
+    );
+  }
 }
 
 function humanizeFolderName(folderName) {
@@ -381,15 +478,18 @@ function collectUrbanizationData(directoryPath) {
     ...plans.slice(0, 2).map((imagePath) => ({ src: imagePath, kind: "plan" })),
   ];
 
+  const explicitDocuments = copyExplicitDocuments(slug);
   const bestPdf = pickBestPdf(pdfFiles, slug);
 
-  const copiedDocuments = pdfFiles
-    .filter((pdfPath) => pdfPath !== bestPdf)
-    .map((pdfPath) => {
-    const outputFileName = `${slug}-${sanitizeFileName(path.basename(pdfPath))}`;
-    copyFileSafe(pdfPath, path.join(docsRoot, outputFileName));
-    return getRelativePublicPath("assets", "docs", outputFileName);
-  });
+  const copiedDocuments =
+    explicitDocuments ??
+    pdfFiles
+      .filter((pdfPath) => pdfPath !== bestPdf)
+      .map((pdfPath) => {
+        const outputFileName = `${slug}-${sanitizeFileName(path.basename(pdfPath))}`;
+        copyFileSafe(pdfPath, path.join(docsRoot, outputFileName));
+        return getRelativePublicPath("assets", "docs", outputFileName);
+      });
   const documents = copiedDocuments;
   const reglamento =
     slug === arroyosUrbanizationSlug
@@ -498,6 +598,7 @@ function main() {
   ensureDirectory(urbanizationsRoot);
   ensureDirectory(logosRoot);
   ensureDirectory(docsRoot);
+  syncReglamentoAssets();
 
   if (!fs.existsSync(sourceRoot)) {
     console.log(`[sync-assets] Source root not found at ${sourceRoot}.`);

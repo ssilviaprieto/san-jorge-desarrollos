@@ -131,9 +131,7 @@ export const urbanizations: Urbanization[] = [
     ],
     "reglamento": ARROYOS_REGLAMENTO_PATH,
     "documents": [
-      "/assets/docs/arroyos-de-san-vicente-arma.pdf",
-      "/assets/docs/arroyos-de-san-vicente-arr.pdf",
-      "/assets/docs/arroyos-de-san-vicente-mas.pdf"
+      "/assets/docs/arroyos-gran-arroyos-color.pdf"
     ]
   },
   {
@@ -209,7 +207,12 @@ export const urbanizations: Urbanization[] = [
       "Acompañamiento comercial personalizado"
     ],
     "reglamento": GENERAL_REGLAMENTO_PATH,
-    "documents": []
+    "documents": [
+      "/assets/docs/las-perdices-enmarcacion-calles-perdices-ii.pdf",
+      "/assets/docs/las-perdices-implantacion-quintas-de-las-perdices-a4.pdf",
+      "/assets/docs/las-perdices-parada-sas-incorporado-perdices-i.pdf",
+      "/assets/docs/las-perdices-master-perdices-i-urbanizacion.pdf"
+    ]
   },
   {
     "name": "Oasis",
@@ -388,7 +391,8 @@ export const urbanizations: Urbanization[] = [
     ],
     "reglamento": GENERAL_REGLAMENTO_PATH,
     "documents": [
-      "/assets/docs/el-viejo-ombu-master.pdf"
+      "/assets/docs/el-viejo-ombu-implantacion-ampliacion.pdf",
+      "/assets/docs/el-viejo-ombu-implantacion-9-manzanas.pdf"
     ]
   }
 ];
