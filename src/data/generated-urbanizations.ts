@@ -66,8 +66,7 @@ export const urbanizations: Urbanization[] = [
     "showcaseImages": [
       "/assets/urbanizaciones/arroyos-de-san-vicente/arroyosback.jpg",
       "/assets/urbanizaciones/arroyos-de-san-vicente/1-636x360.jpg",
-      "/assets/urbanizaciones/arroyos-de-san-vicente/14-1-1019x767.jpg",
-      "/assets/urbanizaciones/arroyos-de-san-vicente/master-png-1.png"
+      "/assets/urbanizaciones/arroyos-de-san-vicente/14-1-1019x767.jpg"
     ],
     "plans": [
       "/assets/urbanizaciones/arroyos-de-san-vicente/master-png-1.png",
@@ -321,8 +320,7 @@ export const urbanizations: Urbanization[] = [
     "showcaseImages": [
       "/assets/urbanizaciones/el-viejo-ombu/pileta-1-840x631.jpg",
       "/assets/urbanizaciones/el-viejo-ombu/pileta-2-840x631.jpg",
-      "/assets/urbanizaciones/el-viejo-ombu/el-ombu11.png",
-      "/assets/urbanizaciones/el-viejo-ombu/master-png-1.png"
+      "/assets/urbanizaciones/el-viejo-ombu/el-ombu11.png"
     ],
     "plans": [
       "/assets/urbanizaciones/el-viejo-ombu/master-png-1.png"
