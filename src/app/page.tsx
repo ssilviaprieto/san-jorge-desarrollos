@@ -243,7 +243,7 @@ export default function Home() {
                 <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
                   Condiciones técnicas
                 </h3>
-                <ul className="space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700 sm:text-base">
+                <ul className="list-outside list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700 sm:text-base">
                   <li>Su medida no debe ser superior a 2 x 3 m².</li>
                   <li>Materiales permitidos: chapa/madera.</li>
                   <li>Pintado verde (elección).</li>
@@ -262,7 +262,7 @@ export default function Home() {
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   Queda terminantemente prohibido utilizar el obrador como:
                 </p>
-                <ul className="mt-2 space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
+                <ul className="mt-2 list-outside list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
                   <li>Vivienda provisoria.</li>
                   <li>Lugar de descanso de propietarios y/o personal.</li>
                   <li>Espacio de permanencia fuera del horario de obra.</li>
@@ -273,7 +273,7 @@ export default function Home() {
                 <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
                   No se permiten
                 </h3>
-                <ul className="mt-2 space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
+                <ul className="mt-2 list-outside list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
                   <li>Construcciones precarias con fines habitacionales.</li>
                   <li>Instalaciones improvisadas para pernoctar.</li>
                   <li>El obrador deberá mantenerse ordenado y en condiciones de higiene y seguridad.</li>
