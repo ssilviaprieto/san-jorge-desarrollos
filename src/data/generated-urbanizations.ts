@@ -66,15 +66,10 @@ export const urbanizations: Urbanization[] = [
     "showcaseImages": [
       "/assets/urbanizaciones/arroyos-de-san-vicente/arroyosback.jpg",
       "/assets/urbanizaciones/arroyos-de-san-vicente/1-636x360.jpg",
-      "/assets/urbanizaciones/arroyos-de-san-vicente/14-1-1019x767.jpg"
+      "/assets/urbanizaciones/arroyos-de-san-vicente/14-1-1019x767.jpg",
+      "/assets/urbanizaciones/arroyos-de-san-vicente/2-1165x657.jpg"
     ],
-    "plans": [
-      "/assets/urbanizaciones/arroyos-de-san-vicente/master-png-1.png",
-      "/assets/urbanizaciones/arroyos-de-san-vicente/masterarr-png-1.jpg",
-      "/assets/urbanizaciones/arroyos-de-san-vicente/masterarr-png-1.png",
-      "/assets/urbanizaciones/arroyos-de-san-vicente/masterarr-png-1.webp",
-      "/assets/urbanizaciones/arroyos-de-san-vicente/lasperdicesmaster-png-1.png"
-    ],
+    "plans": [],
     "gallery": [
       {
         "src": "/assets/urbanizaciones/arroyos-de-san-vicente/arroyosback.jpg",
@@ -151,7 +146,8 @@ export const urbanizations: Urbanization[] = [
     "showcaseImages": [
       "/assets/urbanizaciones/las-perdices/whatsapp-image-2022-10-18-at-09-52-41.jpeg",
       "/assets/urbanizaciones/las-perdices/fotos-png-01.png",
-      "/assets/urbanizaciones/las-perdices/fotos-png-02.png"
+      "/assets/urbanizaciones/las-perdices/fotos-png-02.png",
+      "/assets/urbanizaciones/las-perdices/fotos-png-03.png"
     ],
     "plans": [],
     "gallery": [
@@ -320,11 +316,10 @@ export const urbanizations: Urbanization[] = [
     "showcaseImages": [
       "/assets/urbanizaciones/el-viejo-ombu/pileta-1-840x631.jpg",
       "/assets/urbanizaciones/el-viejo-ombu/pileta-2-840x631.jpg",
-      "/assets/urbanizaciones/el-viejo-ombu/el-ombu11.png"
+      "/assets/urbanizaciones/el-viejo-ombu/el-ombu11.png",
+      "/assets/urbanizaciones/el-viejo-ombu/whatsapp-image-2022-03-17-at-1-38-01-am-20-840x630.jpg"
     ],
-    "plans": [
-      "/assets/urbanizaciones/el-viejo-ombu/master-png-1.png"
-    ],
+    "plans": [],
     "gallery": [
       {
         "src": "/assets/urbanizaciones/el-viejo-ombu/pileta-1-840x631.jpg",
