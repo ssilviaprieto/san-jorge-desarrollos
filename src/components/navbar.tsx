@@ -25,8 +25,8 @@ export function Navbar({
   const isUrbanizationsSection = pathname.startsWith("/urbanizaciones");
 
   return (
-    <header className="sticky top-0 z-50 bg-[rgba(248,250,252,0.72)] shadow-[0_18px_38px_-34px_rgba(15,23,42,0.3)] backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-[84rem] items-center justify-between gap-5 px-4 py-3.5 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
+    <header className="sticky top-0 z-50 border-b border-white/70 bg-[rgba(248,250,252,0.82)] backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-5 px-4 py-3.5 sm:px-6 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-3">
           {companyLogo ? (
             <div className="relative h-10 w-40 sm:h-11 sm:w-48">
@@ -127,7 +127,7 @@ export function Navbar({
       </div>
 
       <div
-        className={`overflow-hidden bg-white/95 transition-[max-height] duration-300 lg:hidden ${
+        className={`overflow-hidden border-t border-white/60 bg-white/95 transition-[max-height] duration-300 lg:hidden ${
           isMenuOpen ? "max-h-[32rem]" : "max-h-0"
         }`}
       >

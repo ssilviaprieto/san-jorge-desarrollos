@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f9f8;
+  --background: #f3f8f8;
   --foreground: #0f172a;
   --font-sans: "Avenir Next", "Segoe UI", sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
@@ -23,9 +23,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   background-image:
-    radial-gradient(circle at top center, rgba(15, 187, 180, 0.12), transparent 34%),
-    radial-gradient(circle at right 12rem top 12rem, rgba(125, 211, 252, 0.08), transparent 24%),
-    linear-gradient(180deg, #fbfdfd 0%, #f6fbfa 30%, #eef6f5 68%, #e7f0ef 100%);
+    radial-gradient(circle at top, rgba(15, 187, 180, 0.11), transparent 30%),
+    linear-gradient(180deg, #fbfdfd 0%, #f3f8f8 38%, #edf5f5 100%);
   text-rendering: optimizeLegibility;
 }
 

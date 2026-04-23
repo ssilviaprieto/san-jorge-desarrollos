@@ -14,7 +14,7 @@ const heroImage = urbanizations[0]?.heroImage;
 export default function Home() {
   return (
     <div className="pb-8">
-      <section className="mx-auto grid min-h-[calc(100vh-7rem)] w-full max-w-[84rem] gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[minmax(0,1.03fr)_minmax(0,0.97fr)] lg:px-8 lg:py-10 2xl:max-w-[92rem] 2xl:gap-8">
+      <section className="mx-auto grid min-h-[calc(100vh-7rem)] w-full max-w-6xl gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[minmax(0,1.03fr)_minmax(0,0.97fr)] lg:items-center lg:px-8 lg:py-10">
         <Reveal className="relative flex flex-col justify-center">
           <div className="max-w-xl space-y-6">
             <div className="inline-flex rounded-full border border-teal-500/20 bg-teal-500/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-teal-800">
@@ -99,7 +99,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-[84rem] px-4 py-6 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
+      <section className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
         <Reveal className="rounded-[1.8rem] border border-white/70 bg-white/88 p-5 shadow-[0_18px_60px_-50px_rgba(15,23,42,0.45)] backdrop-blur-sm sm:p-6 lg:p-7">
           <div className="space-y-5">
             <div className="max-w-2xl space-y-3">
@@ -137,7 +137,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-[84rem] px-4 py-5 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
+      <section className="mx-auto w-full max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
         <Reveal className="overflow-hidden rounded-[1.8rem] border border-teal-200/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(236,254,255,0.88))] p-5 shadow-[0_18px_60px_-50px_rgba(15,23,42,0.42)] sm:p-6 lg:p-7">
           <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
             <div className="space-y-3">
@@ -175,7 +175,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-[84rem] px-4 py-5 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
+      <section className="mx-auto w-full max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
         <Reveal className="space-y-5">
           <div className="max-w-3xl space-y-3">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-teal-700">
@@ -195,7 +195,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-[84rem] px-4 py-6 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
+      <section className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
         <Reveal className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div className="space-y-2">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-teal-700">
@@ -226,7 +226,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-[84rem] px-4 py-5 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
+      <section className="mx-auto w-full max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
         <Reveal className="rounded-[1.8rem] border border-white/70 bg-white/88 p-5 shadow-[0_18px_60px_-50px_rgba(15,23,42,0.45)] backdrop-blur-sm sm:p-6 lg:p-7">
           <div className="grid items-stretch gap-4 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="h-full space-y-4 rounded-[1.25rem] border border-slate-200/80 bg-slate-50/85 p-4">
@@ -296,7 +296,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <section id="contacto" className="mx-auto w-full max-w-[84rem] px-4 py-6 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
+      <section id="contacto" className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
         <Reveal className="overflow-hidden rounded-[1.8rem] border border-white/70 bg-slate-950 text-white shadow-[0_24px_70px_-48px_rgba(15,23,42,0.82)]">
           <div className="grid items-stretch gap-0 lg:grid-cols-[0.98fr_1.02fr]">
             <div className="space-y-4 bg-[linear-gradient(160deg,rgba(15,23,42,0.98),rgba(13,148,136,0.86))] p-5 sm:p-6 lg:p-7">
