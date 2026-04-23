@@ -226,6 +226,74 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mx-auto w-full max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
+        <Reveal className="rounded-[1.8rem] border border-white/70 bg-white/88 p-5 shadow-[0_18px_60px_-50px_rgba(15,23,42,0.45)] backdrop-blur-sm sm:p-6 lg:p-7">
+          <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="space-y-4">
+              <div className="space-y-3">
+                <h2 className="font-[var(--font-display)] text-2xl leading-tight text-slate-950 sm:text-[1.85rem]">
+                  OBRADOR de uso obligatorio en la obra ( PROVISORIO).
+                </h2>
+                <p className="text-sm leading-7 text-slate-600 sm:text-base">
+                  Es obligatoria la instalación de un obrador previo al inicio de la obra. El mismo Deberá ejecutarse en forma prolija
+                </p>
+              </div>
+              <ul className="space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700 sm:text-base">
+                <li>Su medida no debe ser superior a 2*3m2.</li>
+                <li>Materiales permitidos:  chapa/madera.</li>
+                <li>
+                  Pintado verde( elección)
+                  <br />
+                  Ubicado dentro del lote (no sobre línea municipal).
+                </li>
+                <li>baño químico.</li>
+                <li>perforación.</li>
+              </ul>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="rounded-[1.25rem] border border-slate-200/80 bg-slate-50/85 p-4">
+                <h3 className="text-sm font-semibold text-slate-950 sm:text-base">
+                  🚫 Restricciones de uso
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Queda terminantemente prohibido utilizar el obrador como:
+                </p>
+                <ul className="mt-2 space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
+                  <li>
+                    Vivienda provisoria
+                    <br />
+                    Lugar de descanso de propietarios y/o personal
+                  </li>
+                  <li>Espacio de permanencia fuera del horario de obra.</li>
+                  <li>{""}</li>
+                </ul>
+              </div>
+
+              <div className="rounded-[1.25rem] border border-slate-200/80 bg-slate-50/85 p-4">
+                <h3 className="text-sm font-semibold text-slate-950 sm:text-base">
+                  🚫No se permiten:
+                </h3>
+                <div className="mt-2 space-y-2 text-sm leading-6 text-slate-600">
+                  <p>-Construcciones precarias con fines habitacionales</p>
+                  <p>Instalaciones improvisadas para pernoctar</p>
+                  <p>-El obrador deberá mantenerse ordenado en condiciones de higiene y seguridad</p>
+                </div>
+              </div>
+
+              <div className="rounded-[1.25rem] border border-teal-200/70 bg-teal-50/75 p-4 sm:col-span-2 lg:col-span-1">
+                <p className="text-sm font-semibold leading-6 text-slate-950">
+                  📍 Su uso será exclusivo para tareas de obra,
+                </p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  Deberá retirarse una vez finalizada la misma.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       <section id="contacto" className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
         <Reveal className="overflow-hidden rounded-[1.8rem] border border-white/70 bg-slate-950 text-white shadow-[0_24px_70px_-48px_rgba(15,23,42,0.82)]">
           <div className="grid items-center gap-0 lg:grid-cols-[0.98fr_1.02fr]">
