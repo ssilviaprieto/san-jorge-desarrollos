@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function UrbanizationsPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-[84rem] px-4 py-10 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
       <Reveal className="max-w-3xl space-y-4">
         <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-teal-700">
           Urbanizaciones

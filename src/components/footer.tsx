@@ -9,7 +9,7 @@ type FooterProps = {
 export function Footer({ urbanizations, email, whatsappUrl }: FooterProps) {
   return (
     <footer className="mt-24 border-t border-white/60 bg-slate-950 text-slate-200">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.3fr_0.9fr_0.9fr] lg:px-8">
+      <div className="mx-auto grid w-full max-w-[84rem] gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.3fr_0.9fr_0.9fr] lg:px-8 2xl:max-w-[92rem]">
         <div className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.26em] text-teal-300">
             San Jorge Desarrollos

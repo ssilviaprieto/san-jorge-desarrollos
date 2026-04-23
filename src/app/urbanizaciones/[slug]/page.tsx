@@ -47,7 +47,7 @@ export default async function UrbanizationDetailPage({
   }
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-[84rem] px-4 py-10 sm:px-6 lg:px-8 2xl:max-w-[92rem]">
       <Reveal className="overflow-hidden rounded-[2.6rem] border border-white/70 bg-white/88 shadow-[0_24px_78px_-52px_rgba(15,23,42,0.5)] backdrop-blur-sm">
         <div className="grid gap-0 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="relative min-h-[24rem]">
