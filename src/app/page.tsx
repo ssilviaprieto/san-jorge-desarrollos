@@ -298,7 +298,7 @@ export default function Home() {
 
       <section id="contacto" className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
         <Reveal className="overflow-hidden rounded-[1.8rem] border border-white/70 bg-slate-950 text-white shadow-[0_24px_70px_-48px_rgba(15,23,42,0.82)]">
-          <div className="grid items-center gap-0 lg:grid-cols-[0.98fr_1.02fr]">
+          <div className="grid items-stretch gap-0 lg:grid-cols-[0.98fr_1.02fr]">
             <div className="space-y-4 bg-[linear-gradient(160deg,rgba(15,23,42,0.98),rgba(13,148,136,0.86))] p-5 sm:p-6 lg:p-7">
               <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-teal-200">
                 Contacto
