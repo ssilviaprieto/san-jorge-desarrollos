@@ -228,8 +228,8 @@ export default function Home() {
 
       <section className="mx-auto w-full max-w-6xl px-4 py-5 sm:px-6 lg:px-8">
         <Reveal className="rounded-[1.8rem] border border-white/70 bg-white/88 p-5 shadow-[0_18px_60px_-50px_rgba(15,23,42,0.45)] backdrop-blur-sm sm:p-6 lg:p-7">
-          <div className="grid items-start gap-4 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="space-y-4 rounded-[1.25rem] border border-slate-200/80 bg-slate-50/85 p-4">
+          <div className="grid items-stretch gap-4 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="h-full space-y-4 rounded-[1.25rem] border border-slate-200/80 bg-slate-50/85 p-4">
               <div className="space-y-2">
                 <h2 className="font-[var(--font-display)] text-2xl leading-tight text-slate-950 sm:text-[1.85rem]">
                   Obrador de uso obligatorio en la obra (provisorio)
@@ -254,37 +254,37 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-              <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-4">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1 lg:gap-2.5">
+              <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-4 lg:p-3.5">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
                   Restricciones
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
+                <p className="mt-1.5 text-sm leading-6 text-slate-600">
                   Queda terminantemente prohibido utilizar el obrador como:
                 </p>
-                <ul className="mt-2 list-outside list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
+                <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
                   <li>Vivienda provisoria.</li>
                   <li>Lugar de descanso de propietarios y/o personal.</li>
                   <li>Espacio de permanencia fuera del horario de obra.</li>
                 </ul>
               </div>
 
-              <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-4">
+              <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-4 lg:p-3.5">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
                   No se permiten
                 </h3>
-                <ul className="mt-2 list-outside list-disc space-y-1.5 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
+                <ul className="mt-1.5 list-outside list-disc space-y-1 pl-5 text-sm leading-6 text-slate-600 marker:text-teal-700">
                   <li>Construcciones precarias con fines habitacionales.</li>
                   <li>Instalaciones improvisadas para pernoctar.</li>
                   <li>El obrador deberá mantenerse ordenado y en condiciones de higiene y seguridad.</li>
                 </ul>
               </div>
 
-              <div className="rounded-[1.25rem] border border-teal-200/70 bg-teal-50/75 p-4 sm:col-span-2 lg:col-span-1">
+              <div className="rounded-[1.25rem] border border-teal-200/70 bg-teal-50/75 p-4 sm:col-span-2 lg:col-span-1 lg:p-3.5">
                 <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
                   Nota final
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
+                <p className="mt-1.5 text-sm leading-6 text-slate-600">
                   Su uso será exclusivo para tareas de obra.
                 </p>
                 <p className="mt-1 text-sm leading-6 text-slate-600">
