@@ -31,8 +31,6 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-[var(--color-background)] text-[var(--color-foreground)]">
         <div className="relative min-h-screen overflow-x-clip">
-          <div className="pointer-events-none absolute inset-x-0 top-[-10rem] h-[64rem] bg-[radial-gradient(circle_at_top,_rgba(15,187,180,0.2),_transparent_72%)]" />
-          <div className="pointer-events-none absolute left-0 top-28 h-80 w-80 rounded-full bg-teal-300/10 blur-3xl" />
           <Navbar
             urbanizations={urbanizations}
             companyLogo={siteAssets.companyLogo}
